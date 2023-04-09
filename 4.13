@@ -1,0 +1,25 @@
+import java.util.*
+
+object Main {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val sc = Scanner(System.`in`)
+        println("Введите натуральное число n: ")
+        val n = sc.nextInt()
+        var isPrime = true
+        var o: Double
+        if (n > 0) {
+            var d = 2
+            while (d <= n - 1) {
+                o = (n % d).toDouble()
+                d++
+                if (o == 0.0) {
+                    isPrime = false
+                    break
+                }
+            }
+            if (isPrime) println("Число n является простым")
+            else println("Число n не является простым")
+        } else println("Введенное число не является натуральным")
+    }
+}
