@@ -1,0 +1,19 @@
+import java.util.*
+
+object Main {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val sc = Scanner(System.`in`)
+        println("Введите значение a: ")
+        val a = sc.nextDouble()
+        var i = 1
+        var num = 1.0
+        System.out.printf("%d %.4f %b\n", i, num, num > a)
+        while (num <= a) {
+            i++
+            num += 1.0 / i
+            System.out.printf("%d %.4f %b\n", i, num, num > a)
+        }
+        println("\nПервое число последовательности > a = $num")
+    }
+}
