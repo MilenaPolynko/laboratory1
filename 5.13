@@ -1,0 +1,24 @@
+import java.util.*
+
+object Main {
+    fun sumOfPositiveMultiples(m: Int, a: Int, b: Int): Int {
+        var sum = 0
+        for (i in a..b) {
+            if (i > 0 && (i % m).toDouble() == 0.0) {
+                sum += i
+            }
+        }
+        return sum
+    }
+
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val sc = Scanner(System.`in`)
+        println("Введите значение числа m: ")
+        val m = sc.nextInt()
+        println("Введите отрезок [a, b]: ")
+        val a = sc.nextInt()
+        val b = sc.nextInt()
+        println("Сумма положительных чисел в отрезке [" + a + "," + b + "], кратных m = " + sumOfPositiveMultiples(m, a, b))
+    }
+}
