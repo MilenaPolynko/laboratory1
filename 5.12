@@ -1,0 +1,21 @@
+import java.util.*
+
+object Main {
+    fun sumOfPositiveOddNumbers(m: Int): Int {
+        var sum = 0
+        var i = 1
+        while (i < m) {
+            sum += i
+            i += 2
+        }
+        return sum
+    }
+
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val sc = Scanner(System.`in`)
+        println("Введите m: ")
+        val m = sc.nextInt()
+        println("Сумма нечетных положительных чисел меньше m = " + sumOfPositiveOddNumbers(m))
+    }
+}
