@@ -1,0 +1,22 @@
+import java.util.*
+
+object Main {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val sc = Scanner(System.`in`)
+        println("Введите натуральное число n: ")
+        var n = sc.nextInt()
+        var d: Int
+        var isFive = false
+        while (n != 0) {
+            d = n % 10
+            n = n / 10
+            if (d == 5) {
+                isFive = true
+                break
+            }
+        }
+        if (isFive) println("В числе n есть цифра 5")
+        else println("В числе n нет цифры 5")
+    }
+}
