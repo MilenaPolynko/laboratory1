@@ -1,0 +1,22 @@
+import java.util.*
+
+object Main {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val sc = Scanner(System.`in`)
+        println("Введите значение натурального числа m: ")
+        var m = sc.nextInt()
+        println("Введите значение натурального числа n: ")
+        var n = sc.nextInt()
+        val mn = m * n
+        if (n > 0 && m > 0) {
+            while (n != m) {
+                if (m > n) {
+                    m = m - n
+                } else n = n - m
+            }
+            val NOK = (m * n / m)
+            println("НОК (m;n) = $NOK")
+        } else println("Числа m и n не являются натуральными")
+    }
+}
