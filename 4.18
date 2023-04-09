@@ -1,0 +1,25 @@
+import java.util.*
+
+object Main {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val sc = Scanner(System.`in`)
+        println("Введите натуральное число n: ")
+        var n = sc.nextInt()
+        var d = n % 10
+        var p: Int
+        var isDecreasing = true
+        n = n / 10
+        while (n != 0) {
+            p = d
+            d = n % 10
+            n = n / 10
+            if (p > d) {
+                isDecreasing = false
+                break
+            }
+        }
+        if (isDecreasing) println("Цифры в числе упорядочены по убыванию")
+        else println("Цифры в числе не упорядочены по убыванию")
+    }
+}
